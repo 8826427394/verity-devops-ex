@@ -20,7 +20,7 @@ pipeline {
         }
 		//Code ends for stage Compile
 
-//Code starts for stage Code Analysis
+//Code starts stage Code Analysis
 		stage('Code Analysis') {
             steps {
 			 script {
