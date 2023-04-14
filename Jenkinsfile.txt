@@ -26,16 +26,15 @@ pipeline {
 		stage('Code Analysis') {
             steps {
 			 script {
-          scannerHome = tool 'sonarscanner'
+          scannerHome = tool 'sonar-scanner'
         }
-				withSonarQubeEnv('Mysonarqubeserver')
+				withSonarQubeEnv('My SonarQube Server')
 				{
 				sh "${scannerHome}/bin/sonar-scanner"
 				}
 			}
 		}
 		//Code ends for stage Code Analysis
-
 
 
 
